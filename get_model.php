@@ -102,14 +102,14 @@ function GetItemModelData($displayId, $row = null) {
 	if(isset($itemDisplayInfo[$row]) && isset($itemDisplayInfo[$row][$displayId])) {
 		return $itemDisplayInfo[$row][$displayId];
 	}
+	$stmt = $db->prepare("SELECT * FROM `armory_itemdisplayinfo` WHERE `displayid`=:displayId");
+	$stmt->bindParam(':displayId', $displayId);
+	$ret = $stmt->execute();
+	$row_sql = $ret->fetchArray(SQLITE3_ASSOC);
 	if($row == null) {
-		$ret = $db->query("SELECT * FROM `armory_itemdisplayinfo` WHERE `displayid`='$displayId'");
-		$row_sql = $ret->fetchArray(SQLITE3_ASSOC);
 		$data = $row_sql;
 	}
 	else {
-		$ret = $db->query("SELECT `$row` FROM `armory_itemdisplayinfo` WHERE `displayid`='$displayId'");
-		$row_sql = $ret->fetchArray(SQLITE3_ASSOC);
 		$data = $row_sql[$row];
 	}
 	if($data) {
