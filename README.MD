@@ -27,5 +27,5 @@ Edit index.php [DisplayID's]
 
 You can use it for make our server 3D Character Armory/Viewer
 
-Our website : [MasterkinG32.CoM](https://masterking32/com)
+Our website : [MasterkinG32.CoM](https://masterking32.com)
 
