@@ -20,5 +20,9 @@ How to Install
 ========
 
 Just copy to your htdocs or public_html direcotry
+
+[Download](https://archive.org/download/wow-models/wow-models.rar) & Extract models.rar inside your project directoy. ([Mirror Download Link](https://github.com/downloads/Seejayz/WorldofwarcraftArmory/models.rar))
+
 Edit index.php [DisplayID's]
+
 You can use it for make our server 3D Character Armory/Viewer
